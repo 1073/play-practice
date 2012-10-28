@@ -1,14 +1,16 @@
-# Tasks schema
+# system_user schema
 
 # --- !Ups
 
-CREATE SEQUENCE task_id_seq;
-CREATE TABLE task (
-    id integer NOT NULL DEFAULT nextval('task_id_seq'),
-    label varchar(255)
+CREATE SEQUENCE user_id_seq;
+CREATE TABLE system_user (
+    id integer NOT NULL DEFAULT nextval('user_id_seq'),
+    login_id varchar(255),
+    password varchar(255)
+    name varchar(255)
 );
 
 # --- !Downs
 
-DROP TABLE task;
-DROP SEQUENCE task_id_seq;
+DROP TABLE system_user;
+DROP SEQUENCE user_id_seq;

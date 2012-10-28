@@ -5,7 +5,10 @@
 # Home page
 GET     /                           controllers.Application.init
 # Hello action
+GET      /login                      controllers.Application.logined
 POST     /login                      controllers.Application.login
+
+GET      /resources                  controllers.Application.resources
 
 
 # Map static resources from the /public folder to the /assets URL path

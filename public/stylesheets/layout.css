@@ -38,10 +38,18 @@
 /* Header */
 header.header{
 	background-color:#123456;
-	padding:10px 0;
 }
 header.header h1{
 	color:#fff;
+}
+nav.navi{
+	background-color:#123456;
+}
+nav.navi .nav{
+	margin:0;
+}
+nav.navi .nav-tabs{
+	border:0;
 }
 
 /* Body */
