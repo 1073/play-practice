@@ -1,31 +1,32 @@
-@(tasks: List[Task], taskForm: Form[String])
+@(loginForm: Form[(String,String)])
 
 @import helper._
+@import helper.twitterBootstrap._
 
-@main("Todo list") {
+@main(title = "Login") {
 
-    <h1>@tasks.size task(s)</h1>
+    @form(action = routes.Application.login, args = 'id -> "loginForm",'class -> "form-horizontal") {
 
-    <ul>
-        @tasks.map { task =>
-            <li>
-                @task.label
+		<h1>Od2Job</h1>
+		<div class="control-group">
+        @inputText(
+            field = loginForm("login_id"),
+            args = '_label -> "Login ID", 'size -> 20, 'placeholder -> "Your Login ID"
+        )
+		</div>
+		<div class="control-group">
+        @inputText(
+            field = loginForm("password"),
+            args = '_label -> "Password", 'size -> 20, 'placeholder -> "Your Password"
+        )
+		</div>
 
-                @form(routes.Application.deleteTask(task.id)) {
-                    <input type="submit" value="Delete">
-                }
-            </li>
-        }
-    </ul>
-
-    <h2>Add a new task</h2>
-
-    @form(routes.Application.newTask) {
-
-        @inputText(taskForm("label"))
-
-        <input type="submit" value="Create">
-
+        <p class="buttons">
+            <button class="btn" type="submit" id="submit">Login</button>
+        <p>
+        <p>
+        	This application is sample. So, please enter something.
+        </p>
     }
 
 }

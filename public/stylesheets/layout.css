@@ -1,0 +1,62 @@
+/*loginForm*/
+#loginForm{
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:350px;
+	height:300px;
+	margin-top:-150px;
+	margin-left:-175px;
+	border-radius:5px;
+	border:1px solid #ccc;
+	padding:30px;
+}
+#loginForm h1{
+	margin: 10px 0 40px;
+}
+
+#loginForm .control-group label{
+  float: left;
+  width: 100px;
+  padding-top: 5px;
+  text-align: left;
+
+}
+#loginForm .control-group .help-block{
+	display:none;
+}
+#loginForm .control-group .help-inline{
+	height:20px;
+	display:block;
+	color:red;
+}
+#loginForm .buttons{
+	text-align: center;
+}
+
+/* Header */
+header.header{
+	background-color:#123456;
+	padding:10px 0;
+}
+header.header h1{
+	color:#fff;
+}
+
+/* Body */
+div#Body{
+	margin:10px 0;
+}
+
+
+/* Footer */
+footer.footer{
+	background-color:#eee;
+	border-top:1px solid #ccc;
+	margin-top: 50px;
+	padding:50px 0;
+}
+footer.footer p{
+	text-align:center;
+}

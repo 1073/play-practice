@@ -1,7 +1,32 @@
-@(message: String)
+@(loginForm: Form[(String,String)])
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message)
-    
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(title = "Login") {
+
+    @form(action = routes.Application.login, args = 'id -> "loginForm",'class -> "form-horizontal") {
+
+		<h1>Od2Job</h1>
+		<div class="control-group">
+        @inputText(
+            field = loginForm("login_id"),
+            args = '_label -> "Login ID", 'size -> 20, 'placeholder -> "Your Login ID"
+        )
+		</div>
+		<div class="control-group">
+        @inputText(
+            field = loginForm("password"),
+            args = '_label -> "Password", 'size -> 20, 'placeholder -> "Your Password"
+        )
+		</div>
+
+        <p class="buttons">
+            <button class="btn" type="submit" id="submit">Login</button>
+        <p>
+        <p>
+        	This application is sample. So, please enter something.
+        </p>
+    }
+
 }
